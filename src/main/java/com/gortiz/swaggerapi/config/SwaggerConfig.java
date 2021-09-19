@@ -32,16 +32,17 @@ public class SwaggerConfig {
 	
     private ApiInfo getApiInfo() {
 
-        return new ApiInfo(
-                " API Contactos",
-                "Simple ejemplo uso de + Swagger 2",
-                "V1",
+        ApiInfo apiInfo = new ApiInfo(
+                "Spring  Swagger Example API Gustavo Ortiz",
+                "Spring Boot Swagger Example API ",
+                "1.0",
                 "",
-                new Contact("Gustavo Ortiz", "https://www.-.-.com", "gortiz@....com"),
-                "CC BY-SA 3.0",
-                "",
-                Collections.emptyList()
-
+                new Contact("gortiz", "https://",
+                        "@gmail.com"),
+                "Apache License Version 2.0",
+                "https://www.apache.org/licesen.html"
         );
+
+        return apiInfo;
     }
 }
