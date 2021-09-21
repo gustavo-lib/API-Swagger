@@ -32,7 +32,7 @@ public class SwaggerConfig {
 	
     private ApiInfo getApiInfo() {
 	    ApiInfo apiInfo = new ApiInfo(
-                "Spring  Swagger Example API Gustavo Ortiz",
+                "Spring  Swagger Example API for Gustavo Ortiz",
                 "Spring Boot Swagger Example API ",
                 "1.0",
                 "",
