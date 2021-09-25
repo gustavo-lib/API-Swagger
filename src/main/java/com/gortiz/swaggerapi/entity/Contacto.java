@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
@@ -20,6 +21,12 @@ public class Contacto implements Serializable {
 	
 	@NotBlank
 	private String nombre;
+
+	@ApiModelProperty(
+			value = "first name of the user",
+			name = "firstName",
+			dataType = "String",
+			example = "Vatsal")
 	private String telefono;
 	private String email;
 	private String direccion;
