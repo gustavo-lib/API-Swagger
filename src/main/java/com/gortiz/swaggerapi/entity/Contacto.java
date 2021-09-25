@@ -20,14 +20,25 @@ public class Contacto implements Serializable {
 	private Long id;
 	
 	@NotBlank
+	@ApiModelProperty(
+			value = "nommbre",
+			name = "firstName",
+			dataType = "String",
+			example = "gustavo")
 	private String nombre;
 
 	@ApiModelProperty(
-			value = "first name of the user",
-			name = "firstName",
+			value = "telefono",
+			name = "telefono",
 			dataType = "String",
-			example = "Vatsal")
+			example = "274..59..1")
 	private String telefono;
+
+	@ApiModelProperty(
+			value = "correo",
+			name = "email",
+			dataType = "String",
+			example = "elpelucasab(at)")
 	private String email;
 	private String direccion;
 	private String codigopostal;

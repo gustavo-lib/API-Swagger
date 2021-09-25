@@ -18,7 +18,7 @@ import com.gortiz.swaggerapi.entity.Contacto;
 
 @RestController
 @RequestMapping("/api")
-@Api(value = "Swagger API- Gustavo Ortiz", description = "Shows hello world")
+@Api(value = "Swagger API- Gustavo Ortiz", description = "Shows title API Rest")
 public class ContactoController {
 
 	@ApiOperation(value = "Returns List contactos")
