@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +16,7 @@ import com.gortiz.swaggerapi.entity.Contacto;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponses;
+import io.swagger.models.Contact;
 import io.swagger.annotations.ApiResponse;
 
 @RestController
@@ -52,7 +55,7 @@ public class ContactoController {
 	            @ApiResponse(code = 403, message = "forbidden!!!"),
 	            @ApiResponse(code = 404, message = "not found!!!") })
 	@PostMapping("/contacto")
-	public ResponseEntity<Contacto> addContact() {
+	public ResponseEntity<Contacto> addContact(@RequestBody Contact body) {
 
 		return null;
 
@@ -65,7 +68,7 @@ public class ContactoController {
 	            @ApiResponse(code = 403, message = "forbidden!!!"),
 	            @ApiResponse(code = 404, message = "not found!!!") })
 	@PutMapping("/contacts/{contactId}")
-	public ResponseEntity<Contacto> updateContact() {
+	public ResponseEntity<Contacto> updateContact(@PathVariable Long id) {
 		return null;
 
 	}
@@ -77,7 +80,7 @@ public class ContactoController {
 	            @ApiResponse(code = 403, message = "forbidden!!!"),
 	            @ApiResponse(code = 404, message = "not found!!!") })
 	@DeleteMapping(path = "/contacts/{contactId}")
-	public ResponseEntity<Void> deleteContactById() {
+	public ResponseEntity<Void> deleteContactById(@PathVariable Long id) {
 
 		return null;
 
