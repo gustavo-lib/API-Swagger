@@ -11,19 +11,30 @@ import javax.validation.constraints.NotBlank;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel
 @Entity
 public class Contacto implements Serializable {
 
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@ApiModelProperty(position = 1,  value = "id")
 	private Long id;
 	
 	@NotBlank
+	@ApiModelProperty(required = true, value = "nombre")
 	private String nombre;
+	@ApiModelProperty(required = true, value = "telefono")
 	private String telefono;
+	@ApiModelProperty(required = true, value = "email")
 	private String email;
+	@ApiModelProperty(required = true, value = "direccion")
 	private String direccion;
+	@ApiModelProperty(required = true, value = "codigopostal")
 	private String codigopostal;
+	@ApiModelProperty(required = true, value = "nota")
 	@Column(length = 4100)
 	private String nota;
 	
